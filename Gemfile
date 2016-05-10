@@ -20,7 +20,7 @@ gem 'jquery-rails'
 
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -30,6 +30,9 @@ gem 'simple_form'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 gem 'devise', '>= 3.2.4'
+gem 'carrierwave'
+gem 'mini_magick', '~> 4.3.1'
+gem 'carrierwave-aws'
 
 gem 'rails_12factor', group: :production
 

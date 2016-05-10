@@ -1,5 +1,5 @@
 class CreateLessons < ActiveRecord::Migration
-  def change
+   def change
     create_table :lessons do |t|
       t.string :title
       t.string :subtitle
