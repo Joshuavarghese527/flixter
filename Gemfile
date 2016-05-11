@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rails_12factor', group: :production 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
@@ -18,7 +20,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-
+gem "figaro"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
@@ -33,8 +35,8 @@ gem 'devise', '>= 3.2.4'
 gem 'carrierwave'
 gem 'mini_magick', '~> 4.3.1'
 gem 'carrierwave-aws'
+gem 'stripe'
 
-gem 'rails_12factor', group: :production
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
