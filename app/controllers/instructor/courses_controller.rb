@@ -18,6 +18,7 @@ before_action :authenticate_user!
 
   def show
     @section = Section.new
+    @lesson = Lesson.new
   end
 
   private
