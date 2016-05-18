@@ -12,10 +12,10 @@
 
 # config/application.yml
 
-AWS_ACCESS_KEY: "Your-access-key"
-AWS_SECRET_KEY: "Your-secret-key"
-AWS_BUCKET:     "Your-bucket"
-AWS_REGION:     "us-east-1"
+AWS_ACCESS_KEY: AKIAJE2LJBTCO77OVBPQ
+AWS_SECRET_KEY: IY9QBbEzsGeaBZPwbjMCVpIQtXQZP/E6MYtOxJec
+AWS_BUCKET:     joshuavarghese
+AWS_REGION:     Oregon
 
 SECRET_KEY: sk_live_vR5Nk0w1DH5LZDxH93IVsTZt
 PUBLISHABLE_KEY: pk_live_bfuZA9uMiEhA0eIf98WaYVP6
