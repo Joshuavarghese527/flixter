@@ -25,7 +25,7 @@
     </button>
   </div>
  <ul class="sections">
-    <% current_course.sections.rank(:row_order).each do |section| %>
+    <% current_course.sections.rank(:row_order_position).each do |section| %>
       <li data-update-url="<%= instructor_section_path section %>" class="section-li">
         <div class="header pull-left">
           <span class="glyphicon glyphicon-list"></span>
@@ -40,7 +40,7 @@
         <br class="clr" />
 
         <ul class="lessons">
-          <% section.lessons.rank(:row_order).each do |lesson| %>
+          <% section.lessons.rank(:row_order_position).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path lesson %>">
               <div class="col-xs-1">
                 <br />
