@@ -44,12 +44,12 @@
   </div>
 
   <div class="col-xs-12">
-    <% current_course.sections.rank(:row_order).each do |section| %>
+    <% current_course.sections.rank(:row_order_position).each do |section| %>
       <div class="section">
         <h3>
           <%= section.title %>
         </h3>
-        <% section.lessons.rank(:row_order).each do |lesson| %>
+        <% section.lessons.rank(:row_order_position).each do |lesson| %>
           <div class="col-xs-12 col-sm-6">
             <div class="lessons text-center">
               <%= link_to lesson_path(lesson) do %>
