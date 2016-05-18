@@ -1,11 +1,24 @@
 <script>
+  $(function() {
+    $('.lessons').sortable({
+      update: function( event, ui ) {
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { lesson: { row_order: ui.item.index() } }
+        });
+      }
+    });
+
+
     $('.sections').sortable({
       update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
-          data: { section: { row_order_position: ui.item.index() } }
+          data: { section: { row_order: ui.item.index() } }
         });
       }
     });
@@ -25,7 +38,7 @@
     </button>
   </div>
  <ul class="sections">
-    <% current_course.sections.rank(:row_order_position).each do |section| %>
+    <% current_course.sections.rank(:row_order).each do |section| %>
       <li data-update-url="<%= instructor_section_path section %>" class="section-li">
         <div class="header pull-left">
           <span class="glyphicon glyphicon-list"></span>
@@ -40,7 +53,7 @@
         <br class="clr" />
 
         <ul class="lessons">
-          <% section.lessons.rank(:row_order_position).each do |lesson| %>
+          <% section.lessons.rank(:row_order).each do |lesson| %>
             <li data-update-url="<%= instructor_lesson_path lesson %>">
               <div class="col-xs-1">
                 <br />
